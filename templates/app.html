@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kalkulatorek</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+</head>
+<body>
+    <center>
+        <div class="jumbotron">
+            <h2>Kalkulator</h2>
+        </div>
+        
+        <div class="container center">
+            <form action="/send" method="POST">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" placeholder="Podaj cyfrę" class="form-control" name="cyfra1">
+                    </div>
+
+                    <div class="col">
+                        <select class="form-control" name="operation">
+                            <option value="dodaj">Dodaj</option>
+                            <option value="odejmij">Odejmij</option>
+                            <option value="pomnoz">Pomnóż</option>
+                            <option value="podziel">Podziel</option>
+                        </select>
+                    </div>
+
+                    <div class="col">
+                        <input type="text" placeholder="Podaj cyfrę" class="form-control" name="cyfra2">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                </div>
+            </form>
+            <br />
+            <div class="alert">
+                {{ sum }}
+            </div>
+        </div>
+
+
+
+
+        <div class="container center">
+            <form action="/send2" method="POST">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" placeholder="Podaj cyfrę" class="form-control" name="cyfra1">
+                    </div>
+
+                    <div class="col">
+                        <select class="form-control" name="operation">
+                            <option value="procentz">% z</option>
+                            <option value="procentz2">Ile to procent z liczby:</option>
+                        </select>
+
+                    </div>
+
+                    <div class="col">
+                        <input type="text" placeholder="Podaj cyfrę" class="form-control" name="cyfra2">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                </div>
+            </form>
+            <br />
+            <div class="alert">
+                {{ sum2 }}
+            </div>
+        </div>
+
+
+
+    </center>
+</body>
+</html>

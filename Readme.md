@@ -1,0 +1,1 @@
+Prosty kalkulator + proste obliczanie procentów. Flask python.
